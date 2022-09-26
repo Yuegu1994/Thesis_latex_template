@@ -1,0 +1,218 @@
+\documentclass[12pt]{report}
+
+\let\cleardoublepage\clearpage
+\pagestyle{plain}
+\setcounter{secnumdepth}{3}
+\raggedbottom
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{tikz} % package for timeline
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usetikzlibrary{decorations.pathreplacing}
+\tikzset{
+	font={\fontsize{10pt}{12}\selectfont}}
+
+
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{amsmath}
+\usepackage{threeparttable}
+
+\usepackage{import} % allow me to change path
+
+\usepackage{hhline}
+%\graphicspath{{C:/PhD/latex/latexpicsch2/}}
+\hfuzz=\maxdimen\newdimen\hfuzz
+\vfuzz=10000pt
+\hbadness=10000
+\vbadness=\maxdimen
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./}
+\usepackage{subcaption}
+\usepackage{floatrow}
+%\usepackage[left=2.54cm, right=2.54cm, top=2cm]{geometry}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing
+%\linespread{1.5} 
+
+\usepackage{booktabs}
+\usepackage{indentfirst} % Add indent to the first paragraph
+%\usepackage{adjustbox}
+\usepackage[toc,page]{appendix}
+
+%\renewcommand{\familydefault}{\sfdefault} % change the font to arial
+
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	citecolor=blue,
+	linkcolor=blue,
+	urlcolor=blue}
+
+
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+%\usepackage{caption}
+
+\captionsetup{%
+	,format=hang
+	,justification=raggedright
+	,singlelinecheck=false
+	,figureposition=top
+	,justification=centering   % center the caption of tables / figures
+}
+
+
+
+%\usepackage[nottoc,nolof,nolot,numbib]{tocbibind} % add bibliography to table of contents
+
+\usepackage[round]{natbib}
+%do 25-65 
+%21-65 
+%fix if better
+%Work on to do list
+%Full steam ahead on third chapter. 
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document}
+	
+	\bibliographystyle{AER}
+	\bibstyle{AER}
+	%	\maketitle
+	
+	
+	\begin{titlepage}
+		
+		\begin{center}
+			\vspace*{1cm}
+			
+			\textbf{\Large Essays on XXXXX}
+			
+			\vspace{0.5cm}
+			%	Thesis Subtitle
+			
+			
+			\vspace{1.5cm}
+			
+			\textbf{\large Name }
+			
+			\vspace{4cm}		
+			\begin{figure}[H]
+				\centering
+				%	\begin{minipage}{0.7\textwidth} % choose width suitably
+					\includegraphics[scale=0.6]{the-uoe-logo.jpg}
+					%	\end{minipage}
+			\end{figure}	
+			\vfill
+			
+			
+			A thesis presented for the degree of\\
+			Doctor of Philosophy
+			
+			\vspace{0.8cm}
+			
+			%	C:/Users/yuegu1994/Documents/PhD/TeXstudio/TCP_project[width=0.4\textwidth]{university}
+			
+			Department of Economics\\
+			University of Edinburgh\\
+			%	Country\\
+			Month Year
+			
+		\end{center}
+	\end{titlepage}
+
+\newpage
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+This is your Acknowledgements section.
+
+
+\newpage
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}%
+
+Your abstract.
+
+
+\newpage
+\chapter*{Lay Summary}
+\addcontentsline{toc}{chapter}{Lay Summary}
+
+This is your Lay Summary section.
+
+
+
+% List of tables and figures
+\newpage
+
+
+\tableofcontents
+
+
+
+
+\newpage
+
+
+
+
+\listoffigures
+
+\newpage
+
+\listoftables
+
+
+\newpage
+
+\chapter[Chapter 1]{Chapter 1\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
+
+content
+
+\chapter[Chapter 2]{Chapter 2\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
+
+content
+
+\chapter[Chapter 3]{Chapter 3\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
+
+content
+
+
+\clearpage
+%\bibliographystyle{aer}
+\bibliography{thesis_Reference-replace-it-with-your-own-bibtex-file}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\appendix
+
+\chapter{Appendix - Chapter 1}
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+
+
+\renewcommand{\thefigure}{A\arabic{figure}}
+
+\setcounter{figure}{0}
+
+
+
+\section{section title}
+\label{appdix-define-labour-outcome}
+
+.....
+
+\end{document}
